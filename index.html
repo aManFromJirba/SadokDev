@@ -10,19 +10,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Sadok Ben Mefteh</title>
     <link rel="stylesheet" href="https://use.typekit.net/oov2wcw.css">
-
   </head>
 
   <body>
 
+    <!--* ________________ NAVIGATION SECTION________________ -->
     <nav>
-      <h1 style="font-size: xx-large;">Sadok Ben Mefteh</h1>
+      <h1 style="font-size: xx-large;padding-top: 0.1rem;">Sadok Ben Mefteh</h1>
       <ul class="nav-links" id="nav-links">
-        <li id='bio' class="active">Home</li>
+        <li id='home' class="active">Home</li>
         <li id='games'>Games</li>
-        <li id='skills'>Resume</li>
-        <li id='res'>About me</li>
-        <li id='more'>Contact</li>
+        <li id='resume'>Resume</li>
+        <li id='about-me'>About me</li>
+        <li id='contact'>Contact</li>
       </ul>
       <div class="menuToggle">
         <div class="line1"></div>
@@ -31,32 +31,123 @@
       </div>
     </nav>
 
-    <div class="container">
-      <div class="bio active">
 
+    <!--* ________________ MAIN CONTAINER SECTION________________ -->
+    <div class="container">
+      <!--* ________________ HOME SECTION ________________ -->
+      <div class="home active">
         <p>
-          <span style="font-size: 30px;">Hello,</span><br>
+          <span style="font-size: 30px;font-weight: bold;">Hey There,</span><br>
           I'm a game dev enthousiast with some experience under my belt when it comes to conceiving, designing and
           building Android and PC games from scratch.
-          <br><br>
-          <button>See portfolio</button>
-          <br><br>
-          Up till now I've mostly done it for the fun of it.
-          but as of lately I've decided to accept work offers either full-time employment or freelance jobs.
-          I mainly use <b>Unity and C# for my work</b>.
-          <br><br>
-          <button>More about my qualifications </button>
-          <br><br>
-          If you are interested in knowing more about me <button>click here</button>
-          and if you want to get in touch please <button>click here</button>
+          <br>
+          <button onclick="document.getElementById('games').click();">Portfolio</button>
+          <br>
+          Up till now, I've mainly done it for fun and for improving my skills.
+          But lately, I've decided it's time to accept work offers, either full-time
+          employment or freelance jobs. I use
+          <b>Unity and C#</b>.
+          <br>
+          <button onclick="document.getElementById('resume').click();">Resume</button>
+          <br>
+          If you are want to know more about me, you can
+          <button onclick="document.getElementById('about-me').click();"
+            style="margin-top: 0;margin-bottom: 0.85rem;">Click here</button>
+          <br>
+          If you'd like to get in touch, please do
+          <button style="margin-top: 0;">Click here</button>
         </p>
         <img src="public/ez2.png" alt="" srcset="">
       </div>
 
+      <!--* ________________ GAMES SECTION________________ -->
       <div class="games ">
+
+        <!-- * Jumpy Slime -->
         <div class="game">
           <div class="desc">
-            <h2>Brawler <a href="github.com"><i class="fa-brands fa-github"></i></a><i
+            <h2>Jumpy Slime [PC]<a href="https://github.com/RamesesXI/MyGames/tree/main/Jumpy%20Slime/Scripts"><i
+                  class="fa-brands fa-github"></i></a><i onclick="downloadgame(1)"
+                class="fa-solid fa-cloud-arrow-down"></i></h2>
+            <hr>
+            <p>
+              Solve this multi-leveled puzzle by clearing all boxes before
+              reaching the finish box.
+            </p>
+          </div>
+          <div class="preview">
+            <img src="public/jumpy-slime1.png" alt="">
+            <img src="public/jumpy-slime2.png" alt="">
+            <img src="public/jumpy-slime3.png" alt="">
+          </div>
+        </div>
+
+        <!-- * Antichamber -->
+        <div class="game">
+          <div class="desc">
+            <h2>
+              Antichamber [Android]<a href="https://github.com/RamesesXI/MyGames/tree/main/Antichamber/Scripts"><i
+                  class="fa-brands fa-github"></i></a><i onclick="downloadgame(2)"
+                class="fa-solid fa-cloud-arrow-down"></i>
+            </h2>
+            <hr>
+            <p>
+              Solve this 3D puzzle by escaping a non-Euclidian, Escher-like
+              building.
+            </p>
+          </div>
+          <div class="preview">
+            <img src="public/maze1.jpg" alt="">
+            <img src="public/maze2.jpg" alt="">
+            <img src="public/maze3.jpg" alt="">
+          </div>
+        </div>
+
+        <!-- * Hack the Safe [Android] -->
+        <div class="game">
+          <div class="desc">
+            <h2>Hack the Safe [Android]<a
+                href="https://github.com/RamesesXI/MyGames/tree/main/Hack%20the%20Safe/Scripts"><i
+                  class="fa-brands fa-github"></i></a><i onclick="downloadgame(3)"
+                class="fa-solid fa-cloud-arrow-down"></i></h2>
+            <hr>
+            <p>
+              Figure out the number lock for cracking the safe by getting
+              hints for each attempt.
+            </p>
+          </div>
+          <div class="preview">
+            <img src="public/crackpin1.jpg" alt="">
+            <img src="public/crackpin2.jpg" alt="">
+            <img src="public/crackpin3.jpg" alt="">
+          </div>
+        </div>
+
+        <!-- * Guess the Flag -->
+        <div class="game">
+          <div class="desc">
+            <h2>Guess the Flag [Android]<a
+                href="https://github.com/RamesesXI/MyGames/tree/main/Guess%20the%20Flag/Scripts"><i
+                  class="fa-brands fa-github"></i></a><i onclick="downloadgame(4)"
+                class="fa-solid fa-cloud-arrow-down"></i></h2>
+            <hr>
+            <p>
+              Test your global knowledge by guessing country names from
+              their flags.
+            </p>
+          </div>
+          <div class="preview flags">
+            <img src="public/guessflag1.jpg" alt="">
+            <img src="public/guessflag2.jpg" alt="">
+            <img src="public/guessflag3.jpg" alt="">
+          </div>
+        </div>
+
+        <!-- * Brawler -->
+        <div class="game">
+          <div class="desc">
+            <h2>Brawler [PC] (Prototype)<a href="https://github.com/RamesesXI/MyGames/tree/main/Brawler/Scripts"><i
+                  class="fa-brands fa-github"></i></a><i onclick="downloadgame(5)"
                 class="fa-solid fa-cloud-arrow-down"></i>
             </h2>
             <hr>
@@ -73,72 +164,7 @@
           </div>
         </div>
 
-        <div class="game">
-          <div class="desc">
-            <h2>
-              Aurolax <a href="github.com"><i class="fa-brands fa-github"></i></a>
-            </h2>
-            <hr>
-            <p>
-              Solve this 3D puzzle by escaping a non-Euclidian, Escher-like
-              building.
-            </p>
-          </div>
-          <div class="preview">
-            <img src="public/maze1.jpg" alt="">
-            <img src="public/maze2.jpg" alt="">
-            <img src="public/maze3.jpg" alt="">
-          </div>
-        </div>
-
-        <div class="game">
-          <div class="desc">
-            <h2>Brawler <a href="github.com"><i class="fa-brands fa-github"></i></a></h2>
-            <hr>
-            <p>
-              Solve this multi-leveled puzzle by clearing all boxes before
-              reaching the finish box.
-            </p>
-          </div>
-          <div class="preview">
-            <img src="public/jumpy-slime1.png" alt="">
-            <img src="public/jumpy-slime2.png" alt="">
-            <img src="public/jumpy-slime3.png" alt="">
-          </div>
-        </div>
-        <div class="game">
-          <div class="desc">
-            <h2>Crack Lock <a href="github.com"><i class="fa-brands fa-github"></i></a></h2>
-            <hr>
-            <p>
-              Figure out the number lock for cracking the safe by getting
-              hints for each attempt.
-            </p>
-          </div>
-          <div class="preview">
-            <img src="public/crackpin1.jpg" alt="">
-            <img src="public/crackpin2.jpg" alt="">
-            <img src="public/crackpin3.jpg" alt="">
-          </div>
-        </div>
-
-        <div class="game">
-          <div class="desc">
-            <h2>iilam <a href="github.com"><i class="fa-brands fa-github"></i></a></h2>
-            <hr>
-            <p>
-              Test your global knowledge by guessing country names from
-              their flags.
-            </p>
-          </div>
-          <div class="preview flags">
-            <img src="public/guessflag1.jpg" alt="">
-            <img src="public/guessflag2.jpg" alt="">
-            <img src="public/guessflag3.jpg" alt="">
-          </div>
-        </div>
-
-        <div class="game">
+        <!-- <div class="game">
           <div class="desc">
             <h2>Shapes <a href="github.com"><i class="fa-brands fa-github"></i></a></h2>
             <hr>
@@ -152,23 +178,107 @@
             <img src="public/shapes2.jpg" alt="">
             <img src="public/shapes3.jpg" alt="">
           </div>
-        </div>
+        </div> -->
 
       </div>
-      <div class="skills ">
-        <h2>Skills</h2>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+
+      <!--* ________________ RESUME SECTION ________________ -->
+      <div class="resume ">
+        <button>Download <i class="fa-solid fa-cloud-arrow-down"></i></button>
+        <img src="/public/Sadoks-Resume.jpg" alt="">
       </div>
-      <div class="res">
-        <h2>Resume</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+      <!--* ________________ ABOUT-ME SECTION ________________ -->
+      <div class="about-me">
+        This is a summary of my life story regarding my passion for game development. Giving some context and background
+        on how I got onto this path.
+         
+        <h2>Gaming Obsession:</h2>
+        I've been playing games since I was 4 years old, it started with random PC games I found on the family desktop,
+        into online flash games, later getting sucked into PlayStation 2 games, then Game Boy, PSP, Mobile games, but
+        especially playing pretty much all and any PC game I liked (Cracked games, because back in the day there was no
+        possibility to make international purchases from Tunisia).
+        I would scour the internet to find the next game to get obsessed about. I’ve played and enjoyed probably every
+        possible game genre, from the big studio games to the small indie games, which I would sometimes find more
+        enjoyable than the former. In fact, it was those creative small indie games (Don't Starve, Stardew Valley,
+        Battlerite…) that motivated me and opened my eyes to the possibility of creating games myself.
+        I also really enjoyed competitive games and would achieve relatively high ranks once I figured out the game's
+        macro fundamentals and honed my mechanical skills, such as Platinum on LoL, Diamond on OW, and lately Diamond on
+        AoE4.
+         
+        <h2>
+          School and Game Dev:
+
+        </h2>
+        At school I really loved Mathematics. It was fun for me because I looked at solving math problems as if solving
+        puzzles, pretty much a game. But I still didn't like how it was purely theoretical. It felt like a completely
+        useless practice to me until I got into coding in Unity. The ability to translate mathematical reasoning and
+        expressions into actual tangible gameplay mechanics felt pretty astonishing to me and I knew this is the career
+        I will be following, as it merges my love for Math with Gaming.
+         
+        I enrolled in an intensive 30-day C#/Unity bootcamp, started working solo on several game ideas, and even got
+        into university for a computer science degree.
+        I made a few small games to get myself comfortable with the development process, but my goal was to create a hit
+        multiplayer turn-based combat game by myself that would have a dedicated following, which I believed I could do
+        from the very start of this journey. And that was the beginning of my downfall.
+        I was totally creatively blocked when it comes to coming up with something that can live up to my high
+        standards. I would create and work on a whole concept for months only to scrap it and start over because it
+        didn't feel good enough. I would eventually get super frustrated and start dabbling with a million project ideas
+        without getting anywhere, either due to having an unfeasible scope or unreachable expectations for a rookie. I
+        started losing faith in myself as a game dev.
+         
+        Even though I had a robust skillset at that point, I knew I never really gotten into this to slave away at some
+        company. I wanted to create my personal epic games, not mediocre, but great games that would have great
+        followings, all by myself.
+        Those immature and unrealistic expectations made me so disillusioned with this whole thing. I lost confidence
+        and faith in my ability and initial vision to make something great to the point where I started looking into
+        different career paths, something that I can be good at.
+         
+        <h2>
+
+          Exploring Other Passions & Career Paths:
+        </h2>
+        This is an epic chapter of my life that I won't get into its details, but another thing I was simultaneously
+        passionate about was Non-Duality and Spiritual Awakening.
+        I switched my major to Philosophy half-way through. I mixed speeches about this topic with music which I posted
+        on YouTube. Lived in a monastery in Japan. And even co-founded a group which organizes events in which I get to
+        talk about this topic.
+         
+        I also got into Astrology which I was so obsessed about that I was rigorously studying to become a professional
+        astrologer. Later I realized that the practice of interpreting and translating for people is not as easy and
+        interesting as just silently looking into my own charts and receiving mind-blowing insights, given that I
+        thoroughly understand myself and my life situation as opposed to dealing with strangers.
+         
+        I later saw an opportunity of getting rich quick by combining my astrological knowledge with trading currencies
+        and stocks. After a few months, although I found some cool correlations, there weren’t enough concrete and
+        reliable indicators to even make a consistent income. I gave up on that too.
+         <h2>
+          Back to Game Dev:
+        </h2>
+
+        When a friend, one day, motivated to get back into programming, I re-opened my old projects, went through the
+        code and kind of re-awakened and re-lived that passion and excitement I had when I first made them.
+        I went through everything I created in the past, refreshed my knowledge of all the coding and unity concepts,
+        and even started working on a new project.
+        Now, I feel like the next step for me is to work full-time for a good company. Not only will I be contributing
+        my skills to a greater goal, but I'd also be learning and improving myself in return.
+         
+        One day, I will create that epic game I dreamt about. Even though I still have no clue when, how, and even what
+        it would be :p
+
       </div>
-      <div class="more">
-        <h2>More about me</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+      <!--* ________________ CONTACT SECTION ________________ -->
+      <div class="contact">
+        <span>
+          <i class="fa-brands fa-github"></i>
+
+        </span>
       </div>
     </div>
 
+
+    <!--* ________________ MODAL MECHANISM ________________ -->
     <div class="modal-bg">
       <div class="modal">
         <img class="modalImage" alt="" srcset="">
@@ -177,8 +287,6 @@
         <span class="clsB"><i class="fa-solid fa-xmark"></i></span>
       </div>
     </div>
-
-
 
   </body>
 

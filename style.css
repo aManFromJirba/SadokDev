@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
-
 * {
   margin: 0;
   padding: 0;
@@ -12,8 +10,12 @@ body {
   overflow-x: hidden;
   min-height: 100vh;
   color: white;
-  /* font-family: 'Didact Gothic', sans-serif; */
   font-family: century-gothic;
+  padding-bottom: 2rem;
+
+  & button {
+    cursor: pointer;
+  }
 }
 
 /* * THE NAV */
@@ -27,7 +29,6 @@ nav {
   letter-spacing: 4px;
   margin-bottom: 3rem;
   font-weight: bold;
-
 
   .nav-links {
     display: flex;
@@ -72,13 +73,11 @@ nav {
       display: none;
     }
   }
-
-
 }
 
 /* * HOME PAGE */
 
-.bio {
+.home {
   height: 100%;
   z-index: 2;
   width: 80% !important;
@@ -86,7 +85,6 @@ nav {
   & p {
     width: 55%;
     padding: 1rem 1rem;
-
   }
 
   & img {
@@ -97,7 +95,7 @@ nav {
     height: 80%;
     filter: drop-shadow(5px 5px 160px #666666) blur(0.2px);
     /* drop-shadow(5px 5px 10px #666666); */
-    z-index: 1;
+    z-index: -1;
   }
 
   & button {
@@ -106,13 +104,20 @@ nav {
     border-radius: 10px;
     outline: none;
     border: none;
-  }
+    font-weight: bold;
+    color: aliceblue;
+    margin-block: 0.5rem 1rem;
 
+    &:hover {
+      background-color: #af6a47;
+    }
+  }
 }
 
 /* * HOME PAGE [end] */
 
-/* * Games */
+
+/* * *_______________________GAMES______________________* * */
 
 .games {
   display: flex;
@@ -124,9 +129,13 @@ nav {
     flex-direction: column;
 
     .desc {
+      >hr {
+        margin-bottom: 2rem;
+      }
 
       >h2 {
         font-weight: bold;
+        margin-bottom: 0.25rem;
       }
 
       >p {
@@ -150,12 +159,18 @@ nav {
       display: flex;
       overflow-x: hidden;
       gap: 0.45rem;
+      padding-bottom: 1rem;
       margin-bottom: 3rem;
 
       &>img {
-        border: 4px solid black;
-        width: 32.8%;
-        border-radius: 10px;
+        width: 32.5%;
+        border-radius: 5px;
+        box-shadow: -1px 1px 0px #000,
+          -2px 2px 0px #000,
+          -3px 3px 0px #000,
+          -4px 4px 0px #000,
+          -5px 5px 0px #000,
+          -6px 6px 0px #000;
       }
     }
 
@@ -187,77 +202,115 @@ nav {
   justify-content: center;
   align-items: center;
 
+  .modal {
+    display: flex;
+    position: relative;
+    width: fit-content;
+    height: 90%;
+    overflow-x: hidden;
+    border-radius: 10px;
+    border: 4px solid black;
 
+    .clsB {
+      position: absolute;
+      right: 0.5rem;
+      top: 0.5rem;
+      height: fit-content;
+      color: black;
+      border-radius: 50%;
+      padding: 0.35rem 0.5rem;
+      cursor: pointer;
+      /* box-shadow: -1px 1px 6px 0px white; */
+      background-color: rgba(255, 255, 255, 0.7);
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.8);
+        font-size: large;
+      }
+    }
+
+    .rightA {
+      top: 45%;
+      right: 5px;
+      height: fit-content;
+      position: absolute;
+      background-color: rgba(255, 255, 255, 0.5);
+      color: black;
+      padding: 1rem;
+      border-radius: 50%;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.8);
+
+      }
+    }
+
+    .leftA {
+      top: 45%;
+      left: 5px;
+      height: fit-content;
+      position: absolute;
+      background-color: rgba(255, 255, 255, 0.5);
+      color: black;
+      padding: 1rem;
+      border-radius: 50%;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.8);
+        font-weight: bold;
+      }
+    }
+  }
 }
 
-.modal {
-  display: flex;
-  position: relative;
-  width: fit-content;
-  height: 90%;
-  overflow-x: hidden;
-  border-radius: 10px;
-  border: 4px solid black;
 
-  .clsB {
-    position: absolute;
-    right: 0.5rem;
-    top: 0.5rem;
-    height: fit-content;
-    color: black;
-    border-radius: 50%;
-    padding: 0.35rem 0.5rem;
-    cursor: pointer;
-    /* box-shadow: -1px 1px 6px 0px white; */
-    background-color: rgba(255, 255, 255, 0.7);
 
-    &:hover {
-      background-color: rgba(255, 255, 255, 0.8);
-      font-size: large;
-    }
+/* * *_______________________ [END-OF] GAMES SECTION ______________________* * */
+
+
+
+/* * *_______________________ [START-OF] RESUME SECTION  ______________________* * */
+
+.resume {
+
+  & img {
+    width: 100%;
+    margin-bottom: 1rem;
   }
 
-  .rightA {
-    top: 45%;
-    right: 5px;
-    height: fit-content;
-    position: absolute;
-    background-color: rgba(255, 255, 255, 0.5);
-    color: black;
-    padding: 1rem;
-    border-radius: 50%;
-
-    &:hover {
-      background-color: rgba(255, 255, 255, 0.8);
-
-    }
+  & button {
+    display: flex;
+    align-items: center;
+    float: right;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #ab7c65;
+    padding: 0.35rem 0.45rem;
+    color: white;
+    margin-bottom: 0.5rem;
   }
 
-  .leftA {
-    top: 45%;
-    left: 5px;
-    height: fit-content;
-    position: absolute;
-    background-color: rgba(255, 255, 255, 0.5);
-    color: black;
-    padding: 1rem;
-    border-radius: 50%;
-
-    &:hover {
-      background-color: rgba(255, 255, 255, 0.8);
-      font-weight: bold;
-    }
+  & i {
+    float: right;
+    font-size: large;
+    top: 4px;
+    margin-bottom: 0.22rem;
+    margin-left: 0.25rem;
   }
 }
 
+/* * *_______________________ [END-OF] RESUME SECTION  ______________________* * */
 
 
-/* * [END] Games*/
+/* * *_______________________ [START-OF] RESUME SECTION  ______________________* * */
 
+.about-me {
+  & h2 {
+    margin-block: 1rem;
+  }
+}
 
-
-
-
+/* * *_______________________ [END-OF] RESUME SECTION  ______________________* * */
 
 
 /* * RESPONSIVE ELEMENTS -----------------------------------*/

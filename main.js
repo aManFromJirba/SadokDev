@@ -1,6 +1,7 @@
-// *-Tabs Mechanism
+// * _______________ TAB SELECTION (MECH) ____________________\\
+
 const tabsContainer = document.querySelector('#nav-links');
-let activeTabId = "bio";
+let activeTabId = "home";
 
 tabsContainer.addEventListener("click", (ev) => {
   if (ev.target.nodeName === "LI") {
@@ -16,7 +17,7 @@ tabsContainer.addEventListener("click", (ev) => {
   }
 });
 
-// *-menuToggle Mechanism-*
+// * _______________ MENU TOGGLE (MECH) ____________________\\
 const menuToggle = document.querySelector('.menuToggle')
 menuToggle.addEventListener('click', () => {
   menuToggle.classList.toggle('menuOpen');
@@ -24,12 +25,11 @@ menuToggle.addEventListener('click', () => {
 
 })
 
-// * MODAL MECHANISM ***************
+// * _________________ MODAL GALLERY (MECH) _____________________________\\
 
 const images = document.querySelectorAll('.games img')
 const modalImage = document.querySelector('.modalImage')
-const modal = document.querySelector('.modal-bg')
-const modalHandling = document.querySelector('.handleModal')
+const modalBg = document.querySelector('.modal-bg')
 let src = new String();
 
 images.forEach(image => {
@@ -37,30 +37,46 @@ images.forEach(image => {
     src = e.target.src;
     console.log(src);
     modalImage.setAttribute('src', src);
-    modal.style.visibility = 'visible';
+    modalBg.style.visibility = 'visible';
   })
 })
 //close button
 const closeButton = document.querySelector('.clsB')
+
 closeButton.addEventListener('click', (e) => {
-  modal.style.visibility = 'hidden'
+  modalBg.style.visibility = 'hidden'
 })
 //arrows
 const rightArr = document.querySelector('.rightA');
-const reg = /(\w+)(\.\w+)+(?!.*(\w+)(\.\w+)+)/
+const leftArr = document.querySelector('.leftA');
 
 rightArr.addEventListener('click', function (e) {
-  let gameName = reg.exec(src)[0],
-    newSrc;
-  if (gameName.at(-5) < 3) {
-    gameName = gameName.replace(/\d/, Number(gameName.at(-5)) + 1);
-    console.log(gameName);
-    newSrc = src.replace(/\d/, gameName.at(-6) + 1)
-    console.log(newSrc);
+  if (Number(src.at(-5)) < 3) {
+    src = replaceCharacter(src, -5, Number(src.at(-5)) + 1)
+  } else {
+    src = replaceCharacter(src, -5, 1);
+
   }
-  modalImage.setAttribute('src', newSrc)
+  modalImage.setAttribute('src', src)
 })
 
+leftArr.addEventListener('click', function (e) {
+  if (Number(src.at(-5)) > 1) {
+    src = replaceCharacter(src, -5, Number(src.at(-5)) - 1)
+  } else {
+    src = replaceCharacter(src, -5, 3);
+  }
+  modalImage.setAttribute('src', src)
+})
+
+// * ___ Utils ___\\
+function replaceCharacter(string, index, replacement) {
+  return (
+    string.slice(0, index) +
+    replacement +
+    string.substr(index + 1)
+  );
+}
 
 
 
