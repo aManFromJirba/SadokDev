@@ -1,3 +1,5 @@
+/* * _____________________ GLOBAL _________________________________*/
+
 * {
   margin: 0;
   padding: 0;
@@ -18,7 +20,8 @@ body {
   }
 }
 
-/* * THE NAV */
+/* ! _____________________ GLOBAL _________________________________*/
+/* * _____________________ NAVIGATION _____________________________*/
 nav {
   display: flex;
   justify-content: space-between;
@@ -75,8 +78,8 @@ nav {
   }
 }
 
-/* * HOME PAGE */
-
+/* ! _____________________ NAVIGATION _____________________________*/
+/* *______________________ HOME SEC. ______________________________*/
 .home {
   height: 100%;
   width: 80% !important;
@@ -98,24 +101,23 @@ nav {
   & button {
     padding: 0.55rem 1rem;
     background-color: #ab7c65;
-    border-radius: 10px;
+    border-radius: 7px;
     outline: none;
     border: none;
     font-weight: bold;
-    color: aliceblue;
+    color: white;
     margin-block: 0.5rem 1rem;
+    transition: ease 0.1s;
 
     &:hover {
       background-color: #af6a47;
+      font-size: 13.6px;
     }
   }
 }
 
-/* * HOME PAGE [end] */
-
-
-/* * *_______________________GAMES______________________* * */
-
+/* !______________________ HOME SEC. ______________________________*/
+/* * *____________________ GAMES SEC. _________________________* * */
 .games {
   display: flex;
   flex-direction: column;
@@ -157,7 +159,7 @@ nav {
       overflow-x: hidden;
       gap: 0.45rem;
       padding-bottom: 1rem;
-      margin-bottom: 3rem;
+      margin-bottom: 2.5rem;
 
       &>img {
         width: 32.5%;
@@ -260,14 +262,8 @@ nav {
   }
 }
 
-
-
-/* !_______________________ [END-OF] GAMES SECTION ______________________* * */
-
-
-
-/* * *_______________________ RESUME SECTION  ______________________* * */
-
+/* !_______________________ GAMES SECTION _____________________* * */
+/* * *_____________________ RESUME SECTION  ___________________* * */
 .resume {
 
   & img {
@@ -296,11 +292,8 @@ nav {
   }
 }
 
-/* !_______________________ RESUME SECTION  ______________________* * */
-
-
-/* * *_______________________ [START-OF] RESUME SECTION  ______________________* * */
-
+/* !_______________________ RESUME SECTION  ___________________* * */
+/* *________________________ABOUT-ME SEC. _____________________* * */
 .about-me {
   & h2 {
     margin-block: 1rem;
@@ -315,21 +308,12 @@ nav {
   }
 }
 
-/* !_______________________ RESUME SECTION  ______________________* * */
-
-
-/* * RESPONSIVE ELEMENTS -----------------------------------*/
-
+/* !______________________ ABOUT-ME SEC. ______________________* * */
+/* *______________________ RESPONSIVE ELEMENTS ____________________*/
 @media screen and (max-width: 600px) {
   .menuToggle {
     display: flex;
     cursor: pointer;
-  }
-
-  .home {
-    & img {
-      /* filter: none; */
-    }
   }
 
   .nav-links {
@@ -347,9 +331,6 @@ nav {
     align-items: center;
     transform: translateX(100%);
   }
-
-  /* ! BUG : menu toggle mechanism not working! */
-
 
   .menuOpen {
     .line1 {
@@ -370,16 +351,4 @@ nav {
   }
 }
 
-/* * [END] RESPONSIVE ELEMENTS --------------------------------------------*/
-
-/* .background {
-  position: absolute;
-  height: -webkit-fill-available;
-  width: inherit;
-  background-image: url(public/dev.jpg);
-  background-size: contain;
-  background-position: right center;
-  background-repeat: no-repeat;
-  filter: blur(0.5px);
-  z-index: -1;
-} */
+/* !______________________ RESPONSIVE ELEMENTS ____________________*/
