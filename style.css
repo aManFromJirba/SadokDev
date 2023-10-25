@@ -272,8 +272,7 @@ nav {
   }
 
   & button {
-    display: flex;
-    align-items: center;
+
     float: right;
     border: 1px solid black;
     border-radius: 10px;
@@ -281,6 +280,11 @@ nav {
     padding: 0.35rem 0.45rem;
     color: white;
     margin-bottom: 0.5rem;
+
+    & a {
+      display: flex;
+      align-items: center;
+    }
   }
 
   & i {
