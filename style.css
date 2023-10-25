@@ -265,11 +265,11 @@ nav {
 
 
 
-/* * *_______________________ [END-OF] GAMES SECTION ______________________* * */
+/* !_______________________ [END-OF] GAMES SECTION ______________________* * */
 
 
 
-/* * *_______________________ [START-OF] RESUME SECTION  ______________________* * */
+/* * *_______________________ RESUME SECTION  ______________________* * */
 
 .resume {
 
@@ -299,7 +299,7 @@ nav {
   }
 }
 
-/* * *_______________________ [END-OF] RESUME SECTION  ______________________* * */
+/* !_______________________ RESUME SECTION  ______________________* * */
 
 
 /* * *_______________________ [START-OF] RESUME SECTION  ______________________* * */
@@ -307,6 +307,14 @@ nav {
 .about-me {
   & h2 {
     margin-block: 1rem;
+  }
+
+  & img {
+    float: right;
+    margin: 0 0 1rem 0.25rem;
+    width: 30%;
+    border-radius: 5px;
+    border: 3px solid white;
   }
 }
 
